@@ -187,7 +187,7 @@ Fecha de publicación: *{createdat}*
                 // Opciones de búsqueda de leyes
                 var embeddingsResponse = await _embedService.GetEmbeddingsAsync(query);
                 float[]? embeddings = embeddingsResponse.Value.Data.FirstOrDefault()?.Embedding.ToArray();
- 
+
                 var searchOptionsLaws = new SearchOptions
                 {
                     Filter = "",
@@ -260,7 +260,7 @@ Fecha de publicación: *{createdat}*
 # Fin de leyes #
 Hoy es {DateTime.UtcNow:dd/MMMM/yyyy HH:mm} UTC.
 "));
-                
+
                 finalResponseOptions.Messages.Add(new ChatMessage(ChatRole.User, query));
 
                 var finalResponseResult = await _openAIClient.GetChatCompletionsAsync(finalResponseOptions);
@@ -271,9 +271,12 @@ Hoy es {DateTime.UtcNow:dd/MMMM/yyyy HH:mm} UTC.
             {
                 if (e.Status == 400)
                 {
-                    if(e.ErrorCode == "context_length_exceeded"){
+                    if (e.ErrorCode == "context_length_exceeded")
+                    {
                         response = "Se ha excedido el límite de mensajes. Intenta borrar el historial de mensajes y haz tu consulta de nuevo.";
-                    } else {
+                    }
+                    else
+                    {
                         response = "Lo siento, no puedo proporcionar una respuesta para esa pregunta.";
                     }
                 }
