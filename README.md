@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Alejandría Backend ✨
 
 ## What is Alejandría?
@@ -58,7 +57,3 @@ Alejandría was developed from scratch, starting with the architectural design, 
     - Run the project by clicking the green 'Run' button (▶️) or the 'http' button, and wait for Visual Studio to start the local server. You can now use the project in your browser. 📉
 
 Now you're ready to see the application and start using it.
-=======
-# Alejandría Server/backend
-[Watch the video of the demo 🫡](https://www.youtube.com/watch?v=yGEeAZTmpWc)
->>>>>>> 81d074979b015cb397cfa00996bc662c1b424380
